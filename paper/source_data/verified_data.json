@@ -1,16 +1,6 @@
 {
   "audit_date": "2026-10-08",
   "data_role": "result_selected_diagnostic",
-  "independent_final_test_set": null,
-  "source_declared_independent_final_test_set": true,
-  "independence_status": "unverified_conflicting_provenance",
-  "source_file": "results/HARPO/predictions_with_provenance.json + results/CALSPO/predictions_with_provenance.json",
-  "source_sha256": "2d79c3e189a87729b351b769cb4d387cf566a08e4e3cff1edfee27e27c9007b6",
-  "source_row_line_range": [
-    216,
-    543
-  ],
-  "source_kind": "Metrics recomputed from archived full model outputs, joined by diagnostic_index",
   "prediction_extractor_source": "E:/科研/V4创新与代码/code/experiments/xrpo_multimodal_304/multimodal_evaluation.py",
   "n": 328,
   "unique_original_indices": 328,
@@ -7423,5 +7413,15 @@
     "v4": "CALSPO"
   },
   "source_dataset_sha256": "2342eb2972474670a46483ff0baf30f7db97a9f5d9cfc179f06b55698137d08d",
-  "source_selection_plan_sha256": "9ab169af8899c7ab35ac5910cb494d2a6e7f479ea8fcb976e86d110af8deac32"
+  "source_selection_plan_sha256": "9ab169af8899c7ab35ac5910cb494d2a6e7f479ea8fcb976e86d110af8deac32",
+  "source_kind": "Metrics recomputed from archived full model outputs, joined by diagnostic_index",
+  "source_file": "results/HARPO/predictions_with_provenance.json + results/CALSPO/predictions_with_provenance.json",
+  "source_files": {
+    "results/HARPO/predictions_with_provenance.json": {
+      "sha256": "a01c31a02e789e58955403a6217f4544f7fd6ba4ebb7f9aeaba274085136852a"
+    },
+    "results/CALSPO/predictions_with_provenance.json": {
+      "sha256": "9f05f53320b988765fc8d6d2c14daaddbdbc66d47a2226a7c0c10e91b127c248"
+    }
+  }
 }

@@ -1,5 +1,5 @@
 """Recompute manuscript metrics from the archived full prediction outputs, CPU only."""
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from collections import Counter
 import json,re,math,hashlib
 ROOT=Path(__file__).resolve().parent
@@ -40,10 +40,37 @@ def metrics(subset, model, task):
         result['neutral'] = dict(true_count=truths['neutral'], true_rate=truths['neutral']/n, strict_prediction_count=preds['neutral'], strict_prediction_rate=preds['neutral']/n, tp=tp, false_positive_count=fp, precision=tp/preds['neutral'] if preds['neutral'] else 0, recall=tp/truths['neutral'] if truths['neutral'] else 0, nonneutral_count=nonneutral, nonneutral_false_neutral_rate=fp/nonneutral if nonneutral else 0, neutral_text_prefix_count=len(prefix), neutral_text_prefix_rate=len(prefix)/n, neutral_text_prefix_true_count=prefix_true, neutral_text_prefix_false_count=prefix_false, nonneutral_neutral_text_prefix_rate=prefix_false/nonneutral if nonneutral else 0, invalid_neutral_text_prefix_count=len(invalid_prefix), invalid_neutral_text_prefix_indices=[r['index'] for r in invalid_prefix], description='strict uses the archived evaluation extractor and exact label vocabulary; prefix is a secondary textual tendency count, includes invalid neutral-prefixed long outputs, and is not a corrected accuracy metric')
     return result
 
+def manifest_path(name):
+    """Resolve portable relative paths, including manifests exported on Windows."""
+    normalized = name.replace("\\", "/")
+    relative = PurePosixPath(normalized)
+    if relative.is_absolute() or ".." in relative.parts or ":" in normalized:
+        raise ValueError(f"Invalid manifest path: {name}")
+    target = ROOT.joinpath(*relative.parts).resolve()
+    if not target.is_relative_to(ROOT.resolve()):
+        raise ValueError(f"Manifest path escapes paper directory: {name}")
+    return target
+
+def source_metadata(manifest):
+    return {
+        'source_kind': 'Metrics recomputed from archived full model outputs, joined by diagnostic_index',
+        'source_file': 'results/HARPO/predictions_with_provenance.json + results/CALSPO/predictions_with_provenance.json',
+        'source_files': {
+            name.replace("\\", "/"): {'sha256': item['sha256']}
+            for name, item in manifest.items()
+            if name.replace("\\", "/").endswith('/predictions_with_provenance.json')
+        },
+    }
+
 def main():
     manifest=json.loads((ROOT/'results/source_manifest.json').read_text(encoding='utf8'))
+    seen=set()
     for name,item in manifest.items():
-        assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==item['sha256'],name
+        target=manifest_path(name)
+        if target in seen:
+            raise ValueError(f'Duplicate manifest path: {name}')
+        seen.add(target)
+        assert hashlib.sha256(target.read_bytes()).hexdigest()==item['sha256'],name
     reference=json.loads((ROOT/'results/reported_metrics.json').read_text(encoding='utf8'))
     records={}
     for model,display in [('harpo','HARPO'),('v4','CALSPO')]:
@@ -63,10 +90,10 @@ def main():
             row[model+'_strict_label']=pred if pred in LABELS[row['task']] else '<invalid>'
             row[model+'_reported_correct']=int(row['truth']==row[model+'_strict_label'])
         rows.append(row)
-    result=dict(reference)
+    obsolete={'independent_final_test_set','source_declared_independent_final_test_set','independence_status','source_sha256','source_row_line_range','source_kind','source_file','source_files'}
+    result={k:v for k,v in reference.items() if k not in obsolete}
+    result.update(source_metadata(manifest))
     result['rows']=rows
-    result['source_kind']='Metrics recomputed from archived full model outputs, joined by diagnostic_index'
-    result['source_file']='results/HARPO/predictions_with_provenance.json + results/CALSPO/predictions_with_provenance.json'
     result['models']={}
     for model in ['harpo','v4']:
         correct=sum(r[model+'_reported_correct'] for r in rows)
