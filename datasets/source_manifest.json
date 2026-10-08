@@ -1,0 +1,74 @@
+{
+  "train304": {
+    "path": "/data/datasets/human_behavior_atlas-data/changshaoqing_multimodal_304_v4/train.parquet",
+    "rows": 304,
+    "bytes": 51702,
+    "sha256": "618658dc8f6cbfec0e2c8d91215c591d925fbe02ce651e4ccd69ced0cbebf8e0",
+    "columns": [
+      "problem",
+      "answer",
+      "dataset",
+      "task",
+      "class_label",
+      "modality_signature",
+      "texts",
+      "ext_video_feats",
+      "ext_audio_feats",
+      "images",
+      "videos",
+      "audios"
+    ],
+    "task_counts": {
+      "depression_cls": 80,
+      "emotion_cls": 224
+    }
+  },
+  "validation216": {
+    "path": "/data/datasets/human_behavior_atlas-data/changshaoqing_multimodal_1216_v5/validation.parquet",
+    "rows": 216,
+    "bytes": 47850,
+    "sha256": "56533e83f28000ea83e4f7ed879e93df33026df0ce75d91676386d77f4a7999a",
+    "columns": [
+      "problem",
+      "answer",
+      "dataset",
+      "task",
+      "class_label",
+      "modality_signature",
+      "texts",
+      "ext_video_feats",
+      "ext_audio_feats",
+      "images",
+      "videos",
+      "audios"
+    ],
+    "task_counts": {
+      "emotion_cls": 162,
+      "depression_cls": 54
+    }
+  },
+  "eval328": {
+    "path": "/data/datasets/human_behavior_atlas-data/changshaoqing_result_selected_diagnostic328_v1/diagnostic.parquet",
+    "rows": 328,
+    "bytes": 57843,
+    "sha256": "2342eb2972474670a46483ff0baf30f7db97a9f5d9cfc179f06b55698137d08d",
+    "columns": [
+      "problem",
+      "answer",
+      "dataset",
+      "task",
+      "class_label",
+      "modality_signature",
+      "texts",
+      "ext_video_feats",
+      "ext_audio_feats",
+      "images",
+      "videos",
+      "audios"
+    ],
+    "task_counts": {
+      "emotion_cls": 287,
+      "depression_cls": 41
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "snapshot_date": "2026-10-07T18:34:57.317804+08:00",
+  "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
+  "environment": "changshaoqing_harpo_p40",
+  "packages": {
+    "torch": "2.5.1+cu118",
+    "transformers": "4.52.2",
+    "ray": "2.44.1",
+    "pyarrow": "19.0.1",
+    "peft": "0.15.2",
+    "numpy": "1.26.4",
+    "tensordict": "0.8.3",
+    "hydra-core": "1.3.2",
+    "accelerate": "1.6.0",
+    "sentence-transformers": "4.1.0",
+    "scikit-learn": "1.7.2",
+    "qwen-omni-utils": null,
+    "torchvision": "0.20.1+cu118",
+    "torchaudio": "2.5.1+cu118",
+    "librosa": null,
+    "av": "17.1.0",
+    "decord": null
+  },
+  "scope": "versions read at export time, not a newly tested installation"
+}

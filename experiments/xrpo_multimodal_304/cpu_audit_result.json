@@ -1,0 +1,13 @@
+{
+  "max_indices": {
+    "text": 71,
+    "text_audio": 212,
+    "text_video_audio": 273
+  },
+  "max_tokens": {
+    "text": 811,
+    "text_audio": 214,
+    "text_video_audio": 645
+  },
+  "mixed_task_batches": 34
+}

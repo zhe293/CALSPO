@@ -1,0 +1,18 @@
+{
+  "verl/verl/workers/fsdp_workers.py": {
+    "before": "1fb83372dcd95d1c2fcf01a6e28d264ade146c5e6c1cd993b54f3df8c97d95e0",
+    "after": "f4640ff369b432d27b2b2c32e2b8a989b16a543fb1ed81875f7be0bf99f994b3"
+  },
+  "verl/verl/workers/rollout/hf_rollout.py": {
+    "before": "e5ca0557f2b112f68fcc2d08162b593a16e4006cf089c25648d509d2861a174a",
+    "after": "5fdafc007ec9d7dd96f73bc38368c1a2116d4dc4c43a8e2b7b47237c403553bd"
+  },
+  "verl/verl/workers/actor/dp_actor.py": {
+    "before": "bcd9005f05f4e86958b339215096c4ad96f4bd37ab0bd6ce91b0efa37ddc8df6",
+    "after": "e9b362c4737a4c4d9fb554ebcbafe34b61d5df0511995dd7a010e51a8a133019"
+  },
+  "verl/verl/trainer/ppo/ray_trainer.py": {
+    "before": "1854511be149056cf9fd3b3388162c33827106c84d4f7ce8b91889754f9b82ef",
+    "after": "ec82d9216af99c2bcaad40d6f11b726df23ae0fac7e1522d7edee8549ead1288"
+  }
+}
