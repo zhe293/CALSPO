@@ -2,7 +2,7 @@
 
 **Class-Aware Supervised Policy Optimization（类别感知监督策略优化）**。
 
-本仓库同时交付 **CALSPO训练算法**与使用该算法训练得到的 **EquiAffect-3B模型权重**，并保存训练与评估数据、两组 AV + HARPO 消融实现及论文初稿。代码基于 Human Behavior Atlas / OmniSapiens 和 VERL，具体 AV 优势恢复、HARPO 调制及类别加权标签监督实现见 `verl/verl/trainer/ppo/`。这是个人科研项目的私有归档。
+本仓库同时交付 **CALSPO训练算法**与使用该算法训练得到的 **EquiAffect-3B模型权重**，并保存训练与评估数据、两组 AV + HARPO 消融实现及论文初稿。代码基于 Human Behavior Atlas / OmniSapiens 和 VERL，具体 AV 优势恢复、HARPO 调制及类别加权标签监督实现见 `verl/verl/trainer/ppo/`。这是个人科研项目的私有归档，计划于论文终版投稿时转为公开。
 
 ## 三组配置
 
