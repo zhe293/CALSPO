@@ -1,5 +1,5 @@
 """CPU-only verification of data, media and preserved source fingerprints."""
-import hashlib,json,ast,os,argparse
+import hashlib,json,ast,os,argparse,subprocess
 from pathlib import Path
 import pyarrow.parquet as pq
 ROOT=Path(__file__).resolve().parents[1]
@@ -32,6 +32,9 @@ for name,item in manifest.items():
 sources=json.loads((ROOT/'datasets/source_manifest.json').read_text(encoding='utf8'))
 for key,item in sources.items():
     assert sha(ROOT/'datasets/original'/f'{key}.parquet')==item['sha256'],key
+tracked=None
+if (ROOT/'.git').exists():
+    tracked=set(subprocess.check_output(['git','ls-files','-z'],cwd=ROOT).decode('utf8').split('\0'))
 for variant in ['calspo','ema075','ema095']:
     code=ROOT if variant=='calspo' else ROOT/'ablations'/variant
     m=json.loads((code/'provenance/source_run_manifest.json').read_text(encoding='utf8'))
@@ -39,6 +42,8 @@ for variant in ['calspo','ema075','ema095']:
         marker='/verl/verl/' if '/verl/verl/' in original else '/experiments/'
         prefix=original.split(marker)[0]
         p=code/Path(original).relative_to(prefix)
+        if tracked is not None:
+            assert p.relative_to(ROOT).as_posix() in tracked,('Not in version control',str(p))
         assert sha(p)==expected,(variant,str(p))
         ast.parse(p.read_text(encoding='utf8'))
     ray=(code/'verl/verl/trainer/ppo/ray_trainer.py').read_text(encoding='utf8')

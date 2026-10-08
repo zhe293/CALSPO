@@ -2,7 +2,7 @@
 # Install the bundled, already-patched source snapshot. No submodule or patches.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-for file in verl/setup.py verl/verl/trainer/ppo/core_algos.py verl/verl/utils/dataset/hba_sft_bam_dataset.py; do
+for file in verl/setup.py verl/verl/workers/actor/dp_actor.py verl/verl/workers/fsdp_workers.py verl/verl/trainer/ppo/core_algos.py verl/verl/utils/dataset/hba_sft_bam_dataset.py; do
     [[ -f "$ROOT/$file" ]] || { echo "Missing bundled source: $file" >&2; exit 1; }
 done
 if [[ "${1:-}" == "--check-only" ]]; then
