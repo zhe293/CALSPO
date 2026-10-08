@@ -65,7 +65,7 @@
 
 EquiAffect-3B采用Qwen2.5-Omni-3B\cite{ref19}作为多模态基座，以CALSPO通过一个共享模型联合训练情绪分类和抑郁分类。输入可包含文本、音频与视频。情绪标签为愤怒、厌恶、恐惧、高兴、中性、悲伤和惊讶；抑郁分类包含抑郁与非抑郁两类。训练时冻结基座参数，只更新LoRA适配参数\cite{ref20}。
 
-EquiAffect-3B是经CALSPO训练得到的模型名称，CALSPO是其训练算法；模型沿用基座架构。训练所得权重以LoRA适配器形式交付，与固定版本的基座共同加载，权重及版本记录见附录D。
+EquiAffect-3B是经CALSPO训练得到的模型名称，CALSPO是其训练算法；模型沿用基座架构。训练所得权重以LoRA适配器形式交付，与基座共同加载，模型使用说明见附录D。
 
 CALSPO包含策略更新和标签监督两个分支。策略分支对每个问题生成G个真实回答，依次进行奖励计算、优势恢复、HARPO调制与策略损失计算；监督分支为每个问题构造一个真实标签目标。两个分支在同一优化步骤中累积梯度。完整流程见附录A.1。
 
@@ -518,5 +518,5 @@ LoRA作用于q、k、v、o及gate、up、down投影，秩为16，lora\_alpha为3
 
 \section{数据与代码可用性草案}
 
-本研究的方法实现、训练与评估数据、两组消融代码及EquiAffect-3B训练后LoRA权重归档于\href{https://github.com/zhe293/CALSPO}{CALSPO仓库}。EquiAffect-3B适配权重对应第38步检查点，包含权重文件、适配器配置及SHA-256校验记录；基座为Qwen/Qwen2.5-Omni-3B，固定版本为\texttt{f75b40e3\allowbreak da2003cd\allowbreak d6e1829b\allowbreak 1f420ca7\allowbreak 0797c34e}，基座权重通过官方下载入口获取。模型使用时需将基座与适配权重共同加载。图表来源数据、绘图脚本及核对记录与初稿一并保存。原始数据与基座的分享范围遵照各自来源许可。
+本研究的方法实现、训练与评估数据、两组消融代码及EquiAffect-3B训练后LoRA权重见\href{https://github.com/zhe293/CALSPO}{CALSPO仓库}。EquiAffect-3B基于Qwen2.5-Omni-3B，使用时需共同加载基座与LoRA适配器。图表来源数据和绘图脚本随论文提供。原始数据与基座模型的分享遵循各自来源许可。
 \end{document}
