@@ -6,3 +6,12 @@ ablations/ema075/scripts/setup_verl.sh text eol=lf
 ablations/ema095/scripts/setup_verl.sh text eol=lf
 datasets/asset_manifest.json text eol=lf
 datasets/media_mapping.json text eol=lf
+# Preserve archived implementation bytes for snapshot SHA-256 on every platform.
+verl/** -text
+experiments/** -text
+training/** -text
+evaluation/** -text
+ablations/*/verl/** -text
+ablations/*/experiments/** -text
+ablations/*/training/** -text
+ablations/*/evaluation/** -text
