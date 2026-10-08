@@ -1,8 +1,8 @@
-# CALSPO
+# CALSPO / EquiAffect-3B
 
 **Class-Aware Supervised Policy Optimization（类别感知监督策略优化）**。
 
-本仓库保存本项目的完整方法实现、训练与评估数据，以及两组 AV + HARPO 消融实现。代码基于 Human Behavior Atlas / OmniSapiens 和 VERL，具体 AV 优势恢复、HARPO 调制及类别加权标签监督实现见 `verl/verl/trainer/ppo/`。这是个人科研项目的私有归档。
+本仓库同时交付 **CALSPO训练算法**与使用该算法训练得到的 **EquiAffect-3B模型权重**，并保存训练与评估数据、两组 AV + HARPO 消融实现及论文初稿。代码基于 Human Behavior Atlas / OmniSapiens 和 VERL，具体 AV 优势恢复、HARPO 调制及类别加权标签监督实现见 `verl/verl/trainer/ppo/`。这是个人科研项目的私有归档。
 
 ## 三组配置
 
@@ -28,6 +28,8 @@ datasets/eval328.parquet      冻结的 328 题评估集，便携媒体路径
 datasets/media/               所需的 471 个音视频文件
 datasets/original/            原始 Parquet 文件，逐字节保留
 datasets/provenance/eval328/   评估集构建、筛选和核验记录
+models/EquiAffect-3B/         训练后LoRA权重、配置、校验及加载说明
+paper/                        同步的Markdown、LaTeX和PDF初稿
 models/base_model_metadata/   基座模型配置、分词器、许可等
 models/base_model_manifest.json  固定版本与权重校验信息
 provenance/                   原始运行、环境及采集记录
@@ -35,6 +37,14 @@ scripts/                      便携运行、模型下载、文件核验入口
 ```
 
 数据移植只替换媒体路径，题目、标签、顺序及表结构保持不变；原路径与便携路径对应关系见 `datasets/media_mapping.json`。媒体使用短文件名以兼容 Windows。328 题集沿用现有冻结数据及其原始构建记录，仓库不改写数据来源和选择过程。训练集含情绪分类 224 题、抑郁分类 80 题；评估集分别为 287 和 41 题。
+
+## EquiAffect-3B训练后模型
+
+EquiAffect-3B 以 Qwen2.5-Omni-3B 为基座，使用 CALSPO 联合训练情绪与抑郁分类。第38步检查点的完整训练后 LoRA 适配权重保存在 [models/EquiAffect-3B](models/EquiAffect-3B/README.md)，与固定版本的基座共同加载。权重使用 Git LFS 保存；克隆后运行 `git lfs pull` 获取实际权重文件，再运行 `python scripts/verify_equiaffect.py` 核验大小、SHA-256及目标层覆盖。
+
+本次从完整 FSDP 检查点提取全部 LoRA 参数，修复了原导出文件漏掉语言解码层的问题；已核验参数覆盖、有限值和原导出参数的一致性。没有重新运行 GPU 训练或推理。加载说明与来源记录见模型目录。
+
+论文：[Markdown初稿](paper/CALSPO论文中文初稿.md)、[LaTeX源文件](paper/latex/main.tex)、[PDF预览](paper/latex/main.pdf)。论文将 CALSPO 与 EquiAffect-3B 分别作为算法和模型产出，新增 Wang 等（Interspeech 2023）的多数中性类过拟合研究作为背景引用。
 
 ## 基座模型
 

@@ -1,0 +1,9 @@
+{
+  "source_checkpoint": "/data/codefile/changshaoqing/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38/actor",
+  "source_state_file": "model_world_size_1_rank_0.pt",
+  "global_step": 38,
+  "extraction": "All LoRA A/B tensors extracted on CPU from the complete single-rank FSDP model state",
+  "tensor_count": 888,
+  "bytes": 164459640,
+  "sha256": "1ec62e94133fd6034b9d669c47a529398a4620be9121038b72bf15b52e0b7483"
+}

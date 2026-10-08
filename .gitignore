@@ -9,3 +9,5 @@ models/Qwen2.5-Omni-3B/
 models/all-MiniLM-L6-v2/
 *.safetensors
 *.log
+
+!models/EquiAffect-3B/adapter_model.safetensors

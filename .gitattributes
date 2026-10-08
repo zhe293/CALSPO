@@ -1,0 +1,2 @@
+models/EquiAffect-3B/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text
+models/EquiAffect-3B/adapter_config.json -text

@@ -1,0 +1,40 @@
+{
+  "source_checkpoint": "/data/codefile/changshaoqing/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38/actor",
+  "global_step": 38,
+  "files": {
+    "adapter_model.safetensors": {
+      "bytes": 164459640,
+      "sha256": "1ec62e94133fd6034b9d669c47a529398a4620be9121038b72bf15b52e0b7483"
+    },
+    "adapter_config.json": {
+      "bytes": 1028,
+      "sha256": "8e21f086cdd1f258df281a5b02b2ad54b3a45d5cf0d8c3355818dba871229686"
+    }
+  },
+  "model_name": "EquiAffect-3B",
+  "training_algorithm": "CALSPO",
+  "artifact_type": "PEFT LoRA adapter",
+  "base_model": "Qwen/Qwen2.5-Omni-3B",
+  "base_revision": "f75b40e3da2003cdd6e1829b1f420ca70797c34e",
+  "original_partial_export": {
+    "tensor_count": 384,
+    "dtype": "F32",
+    "finite": true,
+    "sample_keys": [
+      "base_model.model.audio_tower.layers.0.self_attn.k_proj.lora_A.weight",
+      "base_model.model.audio_tower.layers.0.self_attn.k_proj.lora_B.weight",
+      "base_model.model.audio_tower.layers.0.self_attn.q_proj.lora_A.weight",
+      "base_model.model.audio_tower.layers.0.self_attn.q_proj.lora_B.weight"
+    ],
+    "nonzero_tensor_count": 384,
+    "bytes": 44657536,
+    "sha256": "dad32fed6754b9ce424c5d8d0cc041697ea52a2222f73f97f071be86dfd77bda"
+  },
+  "tensor_validation": {
+    "tensor_count": 888,
+    "dtype": "F32",
+    "finite": true,
+    "original_export_tensors_match": true
+  },
+  "extraction": "All LoRA A/B tensors extracted on CPU from the complete single-rank FSDP model state"
+}
