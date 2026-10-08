@@ -60,6 +60,8 @@ def main():
             if not path.is_dir():p.error('Missing model directory: '+str(path))
         if a.mode=='train' and output.exists() and any(output.iterdir()):p.error('Training output must be new or empty')
         if a.mode=='evaluate' and not Path(a.checkpoint).is_dir():p.error('Checkpoint directory does not exist')
+        # Check media against the dataset loader's base directory before any GPU job.
+        subprocess.run([sys.executable,str(ROOT/'scripts/verify_assets.py')],cwd=ROOT,env=env,check=True)
         output.mkdir(parents=True,exist_ok=True)
         subprocess.run(command,cwd=ROOT,env=env,check=True)
 if __name__=='__main__':main()

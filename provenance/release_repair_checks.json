@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-08",
+  "media_path_base": "parent directory of parquet, matching HBASFTBamDataset",
+  "media_files": 887,
+  "resolved_references": {"train": 296, "validation": 216, "eval328": 471},
+  "nonmedia_dataset_fields_and_original_parquets_unchanged": true,
+  "core_code_snapshot_hashes_match": true,
+  "installation_source_checks": ["calspo", "ema075", "ema095"],
+  "launcher_dry_runs_checked": "three variants, both training and evaluation",
+  "regression_tests": [
+    "moved checkout from unrelated working directory",
+    "duplicated datasets prefix rejected even with matching parquet hash",
+    "missing media rejected even with matching parquet hash"
+  ],
+  "full_model_outputs_per_method": 328,
+  "reported_metrics_and_confusion_matrices_recomputed_and_matched": true,
+  "figure_pngs_match_original_bytes": true,
+  "plotting_qa_bundled": true,
+  "plotting_runs_from_unrelated_working_directory": true,
+  "latex_compiled": true,
+  "gpu_training_or_evaluation_rerun": false
+}

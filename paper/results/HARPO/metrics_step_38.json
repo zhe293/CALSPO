@@ -1,0 +1,148 @@
+{
+  "step": 38,
+  "count": 328,
+  "per_task": {
+    "depression_cls": {
+      "accuracy": 0.975609756097561,
+      "macro_f1": 0.9679937548790007,
+      "balanced_accuracy": 0.9545454545454546,
+      "invalid_rate": 0.0,
+      "positive_recall": 0.9090909090909091,
+      "count": 41,
+      "labels": [
+        "no depression",
+        "depression",
+        "<invalid>"
+      ],
+      "support": {
+        "no depression": 30,
+        "depression": 11
+      },
+      "confusion_matrix": [
+        [
+          30,
+          0,
+          0
+        ],
+        [
+          1,
+          10,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+      ]
+    },
+    "emotion_cls": {
+      "accuracy": 0.5435540069686411,
+      "macro_f1": 0.5502875007942701,
+      "balanced_accuracy": 0.5435540069686412,
+      "invalid_rate": 0.09059233449477352,
+      "count": 287,
+      "labels": [
+        "anger",
+        "disgust",
+        "fear",
+        "happy",
+        "neutral",
+        "sad",
+        "surprise",
+        "<invalid>"
+      ],
+      "support": {
+        "anger": 41,
+        "disgust": 41,
+        "fear": 41,
+        "happy": 41,
+        "neutral": 41,
+        "sad": 41,
+        "surprise": 41
+      },
+      "confusion_matrix": [
+        [
+          36,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          3
+        ],
+        [
+          3,
+          15,
+          2,
+          2,
+          10,
+          3,
+          0,
+          6
+        ],
+        [
+          3,
+          2,
+          8,
+          3,
+          14,
+          0,
+          4,
+          7
+        ],
+        [
+          1,
+          0,
+          1,
+          26,
+          9,
+          1,
+          0,
+          3
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          38,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          20,
+          10,
+          0,
+          6
+        ],
+        [
+          2,
+          0,
+          0,
+          2,
+          13,
+          1,
+          23,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ]
+    }
+  }
+}

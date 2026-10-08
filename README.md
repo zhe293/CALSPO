@@ -25,7 +25,7 @@ ablations/ema095/              去监督，95%／5% 的完整代码快照
 datasets/train.parquet        304 题训练集，便携媒体路径
 datasets/validation.parquet   原实验使用的 216 题验证数据
 datasets/eval328.parquet      冻结的 328 题评估集，便携媒体路径
-datasets/media/               所需的 471 个音视频文件
+datasets/media/               所需的 887 个音视频文件
 datasets/original/            原始 Parquet 文件，逐字节保留
 datasets/provenance/eval328/   评估集构建、筛选和核验记录
 models/EquiAffect-3B/         训练后LoRA权重、配置、校验及加载说明
@@ -66,13 +66,27 @@ python scripts/download_base_model.py --output models/Qwen2.5-Omni-3B --embeddin
 训练在 Linux / CUDA 环境运行。本地 Windows 可阅读、校验和打印运行参数。原实验环境为 Python 3.10、PyTorch 2.5.1+cu118、Transformers 4.52.2、Ray 2.44.1、PEFT 0.15.2；完整已观察版本见 `provenance/environment_snapshot.json`。该记录是原环境快照，并非新机器安装成功的证明。原项目安装文件见 `verl/requirements.txt`、`verl/setup.py` 和 `scripts/setup_verl.sh`；已归档的源码包含实验需要的改动，安装时使用本仓库而不是重新覆盖为上游版本。
 
 ```bash
-pip install -e ./verl --no-deps
+bash scripts/setup_verl.sh
 # 先在自己的 Linux 环境补齐与环境快照一致的依赖。
 python scripts/verify_assets.py
 python scripts/run_experiment.py --variant calspo --gpu 0 --base-model models/Qwen2.5-Omni-3B --embedding-model models/all-MiniLM-L6-v2 --output outputs/calspo
 ```
 
 运行入口默认仅打印解析后的参数；添加 `--execute` 才启动训练。将 `--variant` 改为 `ema075` 或 `ema095` 即切换对应完整实现。每组使用独立空输出目录，禁用自动续训。原实验批大小 8、每题 4 个采样回答、学习率 1e-6、LoRA rank 16 / alpha 32、38 个训练步等设置从源清单继承。
+
+媒体路径均相对Parquet所在的 `datasets/` 目录，形式为 `media/文件名`。核验脚本按实际加载器的目录规则检查全部983个媒体引用：训练296个、验证216个、328题评估471个；同时校验887个媒体文件与三份核心代码快照。训练和评估的 `--execute` 入口会先运行该核验，缺失、空文件或错误路径会中止启动。安装脚本直接安装已包含改动的源码，不初始化子模块或应用外部补丁；`bash scripts/setup_verl.sh --check-only` 可仅检查安装来源。
+
+## 论文结果复现
+
+[paper/README.md](paper/README.md)说明完整逐条回答、原始指标、图表源数据与复算流程。两种模型各328条完整输出按样本身份对齐。
+
+```bash
+python -m pip install -r paper/requirements.txt
+python paper/recompute_metrics.py
+python paper/plot_figures.py
+```
+
+复算与绘图均可在CPU上运行，绘图检查工具已随仓库附带，无需本机科研技能目录。图中CALSPO对应EquiAffect-3B。
 
 在 328 题数据上评估已完成的 checkpoint：
 
