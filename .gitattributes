@@ -15,3 +15,5 @@ ablations/*/verl/** -text
 ablations/*/experiments/** -text
 ablations/*/training/** -text
 ablations/*/evaluation/** -text
+
+review_downloads/*.bin -text

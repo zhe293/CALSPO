@@ -1,0 +1,200 @@
+{
+  "format": 1,
+  "chunk_bytes": 7000000,
+  "files": [
+    {
+      "path": "models/EquiAffect-3B/adapter_model.safetensors",
+      "size": 164459640,
+      "sha256": "1ec62e94133fd6034b9d669c47a529398a4620be9121038b72bf15b52e0b7483",
+      "parts": [
+        {
+          "path": "adapter_model.safetensors.part001.bin",
+          "size": 7000012,
+          "sha256": "5b3a28589e54d535c389ac90dfe5fe476539db94a9594855d67115e0b59b1f18"
+        },
+        {
+          "path": "adapter_model.safetensors.part002.bin",
+          "size": 7000012,
+          "sha256": "31f2a35b7addb557d2d4f03e76effeaa0872e5943d57b4abbc4ec24addb416c3"
+        },
+        {
+          "path": "adapter_model.safetensors.part003.bin",
+          "size": 7000012,
+          "sha256": "ffb5422251e29d953c9145058e8ced434b82f806203a4e0435988ee9fa91f396"
+        },
+        {
+          "path": "adapter_model.safetensors.part004.bin",
+          "size": 7000012,
+          "sha256": "323b1ceae6581f8fa952d045f993f08ae4d15003629183b3e3a514734f5f62e8"
+        },
+        {
+          "path": "adapter_model.safetensors.part005.bin",
+          "size": 7000012,
+          "sha256": "ca4992c9f0931805afb8a648968f594c4518186a5469706da4994828dd9f6064"
+        },
+        {
+          "path": "adapter_model.safetensors.part006.bin",
+          "size": 7000012,
+          "sha256": "9e05ed944c4556867c82817c4f540f7f787fa97e1ace2edb7f54b01685abf28e"
+        },
+        {
+          "path": "adapter_model.safetensors.part007.bin",
+          "size": 7000012,
+          "sha256": "5efab2e69aba624e8a91e23eba3ff6df711fde61d0da4f7dbe90b66c78f0876c"
+        },
+        {
+          "path": "adapter_model.safetensors.part008.bin",
+          "size": 7000012,
+          "sha256": "d18728e783b521c03627447328b0075d89fe861ff345149a6807a063f205442b"
+        },
+        {
+          "path": "adapter_model.safetensors.part009.bin",
+          "size": 7000012,
+          "sha256": "28e8c6d84ce8ee01d06362da5aa5da1aa677990e419ec43f3f3f3ded45652f8f"
+        },
+        {
+          "path": "adapter_model.safetensors.part010.bin",
+          "size": 7000012,
+          "sha256": "052bd1ba59fbff3492500728f639fb55950d36ca8317a115e35898ee947a4102"
+        },
+        {
+          "path": "adapter_model.safetensors.part011.bin",
+          "size": 7000012,
+          "sha256": "3c2b3fcda7323a8516a5ba56ab1b1ed5e89f04229ca4e8a5d6f37feb3bca94da"
+        },
+        {
+          "path": "adapter_model.safetensors.part012.bin",
+          "size": 7000012,
+          "sha256": "d403043a311a0719c87415782ba651b9f29923990e9f0c145e0805571d99c15d"
+        },
+        {
+          "path": "adapter_model.safetensors.part013.bin",
+          "size": 7000012,
+          "sha256": "475f89d984c18d4b259f04994a9526605553792a1c86b8850dee1638df71e2fe"
+        },
+        {
+          "path": "adapter_model.safetensors.part014.bin",
+          "size": 7000012,
+          "sha256": "c0a6419a32f1814957caf055fb340a08954c97f319b69fc7baf450768969d583"
+        },
+        {
+          "path": "adapter_model.safetensors.part015.bin",
+          "size": 7000012,
+          "sha256": "afd39af96910c5e6b5e0149325f06eb5be49b0c2428e02d74aab15557a180859"
+        },
+        {
+          "path": "adapter_model.safetensors.part016.bin",
+          "size": 7000012,
+          "sha256": "4769c83039391e5f57ce8e21ec8718681a2d1d62166aeae0edae0d5bc3d53377"
+        },
+        {
+          "path": "adapter_model.safetensors.part017.bin",
+          "size": 7000012,
+          "sha256": "f7f483f6c70a060ec11d1101f3e11a37e23f7869efbc8cec43c8d4484d01b73b"
+        },
+        {
+          "path": "adapter_model.safetensors.part018.bin",
+          "size": 7000012,
+          "sha256": "d6d6903d8175d2f27899c5df5c1ef9a2da23a7f4cbe615d5d280e6aeaeeed77a"
+        },
+        {
+          "path": "adapter_model.safetensors.part019.bin",
+          "size": 7000012,
+          "sha256": "d115c77b70667f6b9d35d266080af57d640c5e529eb36d264f50ba715dc47bc3"
+        },
+        {
+          "path": "adapter_model.safetensors.part020.bin",
+          "size": 7000012,
+          "sha256": "92099f41c70ee536dbf2970b6b1d54375dc78aaf5371395bd401a53238783d58"
+        },
+        {
+          "path": "adapter_model.safetensors.part021.bin",
+          "size": 7000012,
+          "sha256": "e4921b3c6673f2879d80b31aa3ada734f9cee8ddfb7045bb8447097e2c46e85e"
+        },
+        {
+          "path": "adapter_model.safetensors.part022.bin",
+          "size": 7000012,
+          "sha256": "d5a228de481d35b8dc8fe19c4dcd94cfd76a9843dca6674915d9363c6de6940a"
+        },
+        {
+          "path": "adapter_model.safetensors.part023.bin",
+          "size": 7000012,
+          "sha256": "3b82f2bdfb2e38c9fa3d54bc5075724d04ee4d3e1f8d4b01792b77d2e726717d"
+        },
+        {
+          "path": "adapter_model.safetensors.part024.bin",
+          "size": 3459652,
+          "sha256": "c4439870977e5252d6e52e887bde4512329cdf5107b4de725a375ef0df4ab13b"
+        }
+      ]
+    },
+    {
+      "path": "models/base_model_metadata/tokenizer.json",
+      "size": 12179313,
+      "sha256": "d535e1a5933d55974b873a8286d269bd1a6aef411d51b5412010fca83af8eda7",
+      "parts": [
+        {
+          "path": "tokenizer.json.part001.bin",
+          "size": 7000012,
+          "sha256": "2ccaf528cd514f6d6445d9dbdee998f656e6926c601187fb74e5cd2ac9656497"
+        },
+        {
+          "path": "tokenizer.json.part002.bin",
+          "size": 5179325,
+          "sha256": "7cea3629c6c28c03da6ba1ac40ec91fa0bcc78f3dab1af57f03af65dceeeb86a"
+        }
+      ]
+    },
+    {
+      "path": "paper/figures/fig1_method.svg",
+      "size": 28988273,
+      "sha256": "977d33a87e7463b35209eb676c9c0c4547c607b65d207437de8770f993df20a8",
+      "parts": [
+        {
+          "path": "fig1_method.svg.part001.bin",
+          "size": 7000012,
+          "sha256": "f0fc1be906dc92cff7d9e0cfcae94485d0bc5915ac3efc326d13cd9f659649b8"
+        },
+        {
+          "path": "fig1_method.svg.part002.bin",
+          "size": 7000012,
+          "sha256": "c283bf3afd40c223ccbcb4f1daf9d66143cfd7134e3bf028531a8523b30677df"
+        },
+        {
+          "path": "fig1_method.svg.part003.bin",
+          "size": 7000012,
+          "sha256": "94d018c8a4392a9025932f33a99b5516118c865cc3b23fb958011c642bcd6aa3"
+        },
+        {
+          "path": "fig1_method.svg.part004.bin",
+          "size": 7000012,
+          "sha256": "b4f078da9080c0d20abea7300ee2654e831910347938ae28345e9fae70b3cc07"
+        },
+        {
+          "path": "fig1_method.svg.part005.bin",
+          "size": 988285,
+          "sha256": "9e233965474d457ab9e12f167b20d0a744ebaf2747be890ad3bd90a43ec983fd"
+        }
+      ]
+    },
+    {
+      "path": "paper/figures/fig6_video_cases.pdf",
+      "size": 10082076,
+      "sha256": "6ea343570c1c2778376357fce3168b10ea07c729ab2c194e62669d269bc14122",
+      "parts": [
+        {
+          "path": "fig6_video_cases.pdf.part001.bin",
+          "size": 7000012,
+          "sha256": "8c16fdfd96965dbbf181645f058a05294c5d9788034c9dfe96696f2270804efe"
+        },
+        {
+          "path": "fig6_video_cases.pdf.part002.bin",
+          "size": 3082088,
+          "sha256": "9294e30b766155d314beb41a0acbed2127e44393124bf650ba439873a757f0f4"
+        }
+      ]
+    }
+  ],
+  "binary_header_hex": "43414c53504f005041525400"
+}

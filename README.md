@@ -16,6 +16,7 @@ CALSPO combines class-frequency-weighted label supervision, virtual-reward advan
 
 Install dependencies using `scripts/setup_verl.sh`. Run `python scripts/verify_assets.py` to verify media references and source snapshots; run `python scripts/verify_equiaffect.py` to check adapter tensors. Base-model revision and loading instructions are in `models/`.
 
-The adapter uses Git LFS. Obtain actual weight contents rather than the text pointer. The anonymous mirror's weight-download support must be checked before assuming weights can be downloaded there.
+The source adapter uses Git LFS, and the anonymous mirror cannot serve files larger than 8 MB. Download the review ZIP and run `python scripts/restore_review_assets.py` to reconstruct the actual adapter from the 7 MB binary parts in `review_downloads/`; the same command restores the tokenizer and two large figure assets. Then run `python scripts/verify_equiaffect.py`. See `review_downloads/README.md` for details.
 
 Original dataset and upstream software licenses remain applicable. Personal path redaction changes file digests; manifests describe this anonymized copy. Dataset labels and portable media references are preserved.
+
