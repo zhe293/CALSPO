@@ -2,17 +2,20 @@
   "datasets/train.parquet": {
     "rows": 304,
     "sha256": "b5d84f4a0e8d95fb78f5eb8e005bafd11b43c1fdd642c65c6d651e2fa72866d7",
-    "source_sha256": "618658dc8f6cbfec0e2c8d91215c591d925fbe02ce651e4ccd69ced0cbebf8e0"
+    "source_sha256": "618658dc8f6cbfec0e2c8d91215c591d925fbe02ce651e4ccd69ced0cbebf8e0",
+    "bytes": 59207
   },
   "datasets/validation.parquet": {
     "rows": 216,
     "sha256": "1d143eb46ab8745466d32c62c52a2baef1af941f3e51172d55613026becae397",
-    "source_sha256": "56533e83f28000ea83e4f7ed879e93df33026df0ce75d91676386d77f4a7999a"
+    "source_sha256": "56533e83f28000ea83e4f7ed879e93df33026df0ce75d91676386d77f4a7999a",
+    "bytes": 55303
   },
   "datasets/eval328.parquet": {
     "rows": 328,
     "sha256": "b8c1db31d71c1a707aee682fcd2268d9b74953dfc6265434a3868e9e1b1bb87a",
-    "source_sha256": "2342eb2972474670a46483ff0baf30f7db97a9f5d9cfc179f06b55698137d08d"
+    "source_sha256": "2342eb2972474670a46483ff0baf30f7db97a9f5d9cfc179f06b55698137d08d",
+    "bytes": 60412
   },
   "datasets/media/7238ddd8a469bc5cbc5d.wav": {
     "bytes": 44452,

@@ -20,7 +20,7 @@ def main():
     parser.add_argument('--detach', action='store_true')
     args = parser.parse_args()
     root = args.output_root.resolve(strict=True)
-    assert str(root).startswith('/data/codefile/changshaoqing/harpo_p40_runs/')
+    assert str(root).startswith('/data/codefile/anonymous/harpo_p40_runs/')
     assert root.stat().st_uid == os.getuid()
     here = Path(__file__).resolve().parent
     if args.detach:

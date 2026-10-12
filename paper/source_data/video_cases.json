@@ -1,0 +1,152 @@
+[
+  {
+    "diagnostic_index": 201,
+    "input": {
+      "problem": "<video>\n<audio>\nI'm sorry, you were fighting.\nHow would you describe the emotional state of the speaker in the recording? Choose the most appropriate emotion from: \nanger, \ndisgust, \nfear, \nhappy, \nsurprise, \nneutral, \nsad",
+      "answer": "sad",
+      "dataset": "meld_emotion",
+      "task": "emotion_cls",
+      "class_label": "sadness",
+      "modality_signature": "text_video_audio",
+      "texts": [],
+      "ext_video_feats": [],
+      "ext_audio_feats": [],
+      "images": [],
+      "videos": [
+        "media/f9d5b3efc8ea46812e94.mp4"
+      ],
+      "audios": [
+        "media/b63a816f50715184d503.wav"
+      ]
+    },
+    "transcript_displayed": "I'm sorry, you were fighting.",
+    "frames": [
+      {
+        "time_seconds": 0.5225,
+        "file": "case_201_frame_1.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "time_seconds": 1.3585,
+        "file": "case_201_frame_2.png",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "frame_processing": "Complete frames, aspect preserved; no colour/contrast adjustments.",
+    "audio_display": {
+      "frames": 33451,
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 2.0906875,
+      "display": "All samples aggregated into min/max envelope bins; peak-normalized separately per recording for display, not cross-case amplitude comparison."
+    },
+    "predictions": {
+      "HARPO": "<think>From the tone of the speech, it seems like the speaker is expressing regret or apology. There's no indication of anger, disgust, fear, happiness, surprise, or sadness. The speaker is simply acknowledging that someone was fighting. So, the most appropriate emotion here is neutral.</think> \\boxed{neutral}",
+      "HA + AV 95/5": "<think>Well, from what I can hear, the speaker seems to be expressing a sense of regret or apology. They're saying \"I'm sorry\" which usually indicates a feeling of remorse or guilt. So, I'd say the most appropriate emotion is anger.</think> \\boxed{anger}",
+      "HA + AV 75/25": "<think>Well, from what I can hear, the speaker seems to be expressing a sense of regret or apology. They're saying \"I'm sorry\" which usually indicates a feeling of remorse or guilt. So, I'd say the most appropriate emotion is \"sad\".</think>\\boxed{sad}",
+      "CALSPO": "<think>Well, from what I can hear, the speaker seems to be expressing a sense of regret or apology. They're saying \"I'm sorry\" which usually indicates a feeling of remorse or guilt. So, I'd say the most appropriate emotion is \"sad\".</think>\\boxed{sad}"
+    }
+  },
+  {
+    "diagnostic_index": 116,
+    "input": {
+      "problem": "<video>\n<audio>\nOh, I can't watch this.\nHow would you describe the emotional state of the speaker in the recording? Choose the most appropriate emotion from: \nanger, \ndisgust, \nfear, \nhappy, \nsurprise, \nneutral, \nsad",
+      "answer": "fear",
+      "dataset": "meld_emotion",
+      "task": "emotion_cls",
+      "class_label": "fear",
+      "modality_signature": "text_video_audio",
+      "texts": [],
+      "ext_video_feats": [],
+      "ext_audio_feats": [],
+      "images": [],
+      "videos": [
+        "media/2bb8b2c9e5d023d9ed0f.mp4"
+      ],
+      "audios": [
+        "media/f0a68353c80b843181a4.wav"
+      ]
+    },
+    "transcript_displayed": "Oh, I can't watch this.",
+    "frames": [
+      {
+        "time_seconds": 0.3125,
+        "file": "case_116_frame_1.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "time_seconds": 0.8125,
+        "file": "case_116_frame_2.png",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "frame_processing": "Complete frames, aspect preserved; no colour/contrast adjustments.",
+    "audio_display": {
+      "frames": 20139,
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 1.2586875,
+      "display": "All samples aggregated into min/max envelope bins; peak-normalized separately per recording for display, not cross-case amplitude comparison."
+    },
+    "predictions": {
+      "HARPO": "<think>From the given options, the most appropriate emotion for the speaker in the recording is \"neutral.\" The speaker is simply stating that they can't watch something, without any indication of anger, disgust, fear, happiness, surprise, or sadness.</think> \\boxed{neutral}",
+      "HA + AV 95/5": "<think>From the given options, the most appropriate emotion for the speaker in the recording is \"neutral.\" The speaker is simply stating that they can't watch something, without any indication of anger, disgust, fear, happiness, surprise, or sadness.</think> \\boxed{neutral}",
+      "HA + AV 75/25": "<think>From the given options, the most appropriate emotion for the speaker in the recording is \"neutral.\" The speaker is simply stating that they can't watch something, without any indication of anger, disgust, fear, happiness, surprise, or sadness.</think> \\boxed{neutral}",
+      "CALSPO": "<think>From the given options, the most appropriate emotion for the speaker in the recording is \"neutral.\" The speaker is simply stating that they can't watch something, without any indication of anger, disgust, fear, happiness, surprise, or sadness.</think> \\boxed{neutral}"
+    }
+  },
+  {
+    "diagnostic_index": 102,
+    "input": {
+      "problem": "<video>\n<audio>\nAbove is a video clip. The speaker said: 'If you do find yourself in a persistent cough though, definitely consult a physician.' What is the emotion of the speaker in this video?\nhappy\nsad\nanger\nsurprise\ndisgust\nfear\nAnswer with one word or phrase.",
+      "answer": "fear",
+      "dataset": "mosei_emotion",
+      "task": "emotion_cls",
+      "class_label": "fear",
+      "modality_signature": "text_video_audio",
+      "texts": [],
+      "ext_video_feats": [],
+      "ext_audio_feats": [],
+      "images": [],
+      "videos": [
+        "media/d20df98bf8f3a70a98c1.mp4"
+      ],
+      "audios": [
+        "media/ce30ebd831495af7b027.wav"
+      ]
+    },
+    "transcript_displayed": "If you do find yourself in a\npersistent cough though,\ndefinitely consult a…",
+    "frames": [
+      {
+        "time_seconds": 1.475,
+        "file": "case_102_frame_1.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "time_seconds": 3.8350000000000004,
+        "file": "case_102_frame_2.png",
+        "width": 1280,
+        "height": 720
+      }
+    ],
+    "frame_processing": "Complete frames, aspect preserved; no colour/contrast adjustments.",
+    "audio_display": {
+      "frames": 91210,
+      "sample_rate": 16000,
+      "channels": 1,
+      "duration_seconds": 5.700625,
+      "display": "All samples aggregated into min/max envelope bins; peak-normalized separately per recording for display, not cross-case amplitude comparison."
+    },
+    "predictions": {
+      "HARPO": "<think>From the context of the video, the speaker is giving advice about a persistent cough. This suggests a level of concern and caution, which is more aligned with the emotion of worry rather than the other options like happiness, sadness, anger, surprise, or disgust.</think> \\boxed{worry}",
+      "HA + AV 95/5": "<think>From the context of the video, the speaker is giving advice about a persistent cough. This suggests a level of concern and caution, which is more aligned with the emotion of worry rather than the other options like happiness, sadness, anger, surprise, or disgust.</think> \\boxed{worry}",
+      "HA + AV 75/25": "<think>From the context of the video, the speaker is giving advice about a persistent cough. This suggests a level of concern and caution, which is more aligned with the emotion of worry rather than the other options like happiness, sadness, anger, surprise, or disgust.</think> \\boxed{worry}",
+      "CALSPO": "<think>From the context of the video, the speaker is giving advice about a persistent cough. This suggests a level of concern and caution, which is more aligned with the emotion of worry rather than the other options like happiness, sadness, anger, surprise, or disgust.</think> \\boxed{worry}"
+    }
+  }
+]

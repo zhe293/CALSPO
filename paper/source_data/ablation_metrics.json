@@ -1,0 +1,104 @@
+{
+  "HARPO": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 59.75609756097561
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 55.02875007942701
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 27.235772357723576
+    }
+  ],
+  "HA + AV 95/5": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 59.75609756097561
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 56.02721800771898
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 25.203252032520325
+    }
+  ],
+  "HA + AV 75/25": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 60.97560975609756
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 56.958677929150966
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 22.764227642276424
+    }
+  ],
+  "Uniform label supervision": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 60.36585365853659
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 57.16953448045886
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 22.357723577235774
+    }
+  ],
+  "Without AV": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 61.28048780487805
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 58.06797913829028
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 19.91869918699187
+    }
+  ],
+  "CALSPO": [
+    {
+      "metric": "overall_accuracy",
+      "n": 328,
+      "value": 65.54878048780488
+    },
+    {
+      "metric": "emotion_macro_f1",
+      "n": 287,
+      "value": 62.90938161155156
+    },
+    {
+      "metric": "false_neutral",
+      "n": 246,
+      "value": 19.51219512195122
+    }
+  ]
+}

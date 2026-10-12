@@ -20,12 +20,12 @@
 
 ## 固定资源路径
 
-- 代码：`/data/codefile/changshaoqing/human_behavior_atlas`
-- Conda 环境：`/data/conda/users/maviuserchangshaoqing/envs/changshaoqing_harpo_p40`
+- 代码：`/data/codefile/anonymous/human_behavior_atlas`
+- Conda 环境：`/data/conda/users/maviuseranonymous/envs/anonymous_harpo_p40`
 - 共享模型，只读：`/share/155/pretrained/Qwen2.5-Omni-3B`
 - 共享奖励模型，只读：`/share/155/pretrained/mashang/SAGEPO/reward_models/all-MiniLM-L6-v2`
-- 文本子集：`/data/datasets/human_behavior_atlas-data/changshaoqing_text_trend`
-- 输出根目录：`/data/codefile/changshaoqing/harpo_p40_runs/experiments`
+- 文本子集：`/data/datasets/human_behavior_atlas-data/anonymous_text_trend`
+- 输出根目录：`/data/codefile/anonymous/harpo_p40_runs/experiments`
 
 文本子集使用随机种子 42。训练集包含 128 条，验证集包含 32 条；任务为
 `anxiety_cls` 和 `depression_cls`，两个任务的样本数量相等，但阳性/阴性类别不均衡。验证集共32条中只有3条阳性。媒体列均为空。

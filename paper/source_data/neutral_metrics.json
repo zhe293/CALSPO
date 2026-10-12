@@ -1,0 +1,24 @@
+{
+  "HARPO": {
+    "n": 287,
+    "true": 41,
+    "tp": 38,
+    "fp": 67,
+    "invalid": 22,
+    "other": 160,
+    "recall": 92.6829268292683,
+    "precision": 36.19047619047619,
+    "false_neutral": 27.235772357723576
+  },
+  "CALSPO": {
+    "n": 287,
+    "true": 41,
+    "tp": 41,
+    "fp": 48,
+    "invalid": 31,
+    "other": 167,
+    "recall": 100.0,
+    "precision": 46.06741573033708,
+    "false_neutral": 19.51219512195122
+  }
+}

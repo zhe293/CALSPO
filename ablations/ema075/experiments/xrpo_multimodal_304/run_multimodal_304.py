@@ -135,7 +135,7 @@ def main():
                                          str(args.repo / "verl"), env.get("PYTHONPATH", ""))),
         "PYTHONHASHSEED": str(args.seed),
         "PYTHONUNBUFFERED": "1", "WANDB_MODE": "disabled",
-        "RAY_ADDRESS": "local", "RAY_TMPDIR": "/tmp/changshaoqing",
+        "RAY_ADDRESS": "local", "RAY_TMPDIR": "/tmp/anonymous",
         "VERL_ATTENTION_BACKEND": "eager", "TOKENIZERS_PARALLELISM": "false",
         "HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1",
         "NUMEXPR_NUM_THREADS": "1", "OMP_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "1", "MKL_NUM_THREADS": "1",

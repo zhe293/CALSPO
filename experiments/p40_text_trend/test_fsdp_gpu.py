@@ -33,7 +33,7 @@ from verl import DataProto
 from text_dataset import TextTrendDataset
 from verl.utils.dataset.rl_dataset import collate_fn
 
-manifest=json.loads(Path('/data/codefile/changshaoqing/harpo_p40_runs/experiments_gpu0_v4/grpo_reward_a/run_manifest.json').read_text())
+manifest=json.loads(Path('/data/codefile/anonymous/harpo_p40_runs/experiments_gpu0_v4/grpo_reward_a/run_manifest.json').read_text())
 overrides=manifest['command'][3:]
 overrides=[x.replace('use_orig_params=true','use_orig_params=false') for x in overrides]
 with initialize_config_dir(config_dir=str(REPO/'verl/verl/trainer/config'),version_base=None):

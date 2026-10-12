@@ -1,0 +1,21 @@
+subset,model,category,count,denominator,percent
+All emotions,HARPO,Correct neutral,38,287,13.240418118466899
+All emotions,HARPO,False neutral,67,287,23.34494773519164
+All emotions,HARPO,Invalid neutral-prefix,22,287,7.665505226480835
+All emotions,HARPO,Other outputs,160,287,55.749128919860624
+All emotions,CALSPO,Correct neutral,41,287,14.285714285714285
+All emotions,CALSPO,False neutral,48,287,16.72473867595819
+All emotions,CALSPO,Invalid neutral-prefix,31,287,10.801393728222997
+All emotions,CALSPO,Other outputs,167,287,58.18815331010453
+Text + audio,HARPO,Correct neutral,18,103,17.475728155339805
+Text + audio,HARPO,False neutral,51,103,49.51456310679612
+Text + audio,HARPO,Invalid neutral-prefix,22,103,21.35922330097087
+Text + audio,HARPO,Other outputs,12,103,11.650485436893204
+Text + audio,CALSPO,Correct neutral,19,103,18.446601941747574
+Text + audio,CALSPO,False neutral,39,103,37.86407766990291
+Text + audio,CALSPO,Invalid neutral-prefix,31,103,30.097087378640776
+Text + audio,CALSPO,Other outputs,14,103,13.592233009708737
+Non-neutral emotion items,HARPO,Misclassified as neutral,67,246,27.235772357723576
+Non-neutral emotion items,HA + AV 95/5,Misclassified as neutral,62,246,25.203252032520325
+Non-neutral emotion items,HA + AV 75/25,Misclassified as neutral,56,246,22.76422764227642
+Non-neutral emotion items,CALSPO,Misclassified as neutral,48,246,19.51219512195122

@@ -5,27 +5,27 @@
   "rows": 328,
   "emotion_rows": 287,
   "depression_rows": 41,
-  "source_dataset": "/data/datasets/human_behavior_atlas-data/changshaoqing_emotion_eval754_v6",
+  "source_dataset": "/data/datasets/human_behavior_atlas-data/anonymous_emotion_eval754_v6",
   "source_validation_sha256": "22fcb0b4130fe9e16fbf7f5f07cb1b94a86d0fb7e7a5445e7083b06690e5deaf",
-  "output_directory": "/data/datasets/human_behavior_atlas-data/changshaoqing_result_selected_diagnostic328_v1",
+  "output_directory": "/data/datasets/human_behavior_atlas-data/anonymous_result_selected_diagnostic328_v1",
   "selection_seed": 32046,
   "model_provenance": {
     "harpo46": {
       "predictions_file": "E:\\科研\\human_behavior_atlas\\experiments\\expanded_eval754\\results_20261006\\harpo46\\final_test\\predictions_with_provenance.json",
       "predictions_sha256": "8793e0bd44d79d8b89035995016918e6145e517c1f5f8a14bd7b6a0b74536238",
-      "checkpoint": "/data/codefile/changshaoqing/xrpo_seed_repeats_20260925/results/harpo_s46/original_harpo/global_step_38",
+      "checkpoint": "/data/codefile/anonymous/xrpo_seed_repeats_20260925/results/harpo_s46/original_harpo/global_step_38",
       "seed": 46
     },
     "harpo48": {
       "predictions_file": "E:\\科研\\human_behavior_atlas\\experiments\\harpo_all38_eval754_20261006\\results_20261007\\harpo48\\final_test\\predictions_with_provenance.json",
       "predictions_sha256": "98b379d72ad2fb6543108d916a0e1026e86a6e874eb4fab4c7dbe8134b7479fc",
-      "checkpoint": "/data/codefile/changshaoqing/original_harpo_seed48_stepckpt_304/results/harpo_s48_gpu0/global_step_38",
+      "checkpoint": "/data/codefile/anonymous/original_harpo_seed48_stepckpt_304/results/harpo_s48_gpu0/global_step_38",
       "seed": 48
     },
     "v4_48": {
       "predictions_file": "E:\\科研\\human_behavior_atlas\\experiments\\expanded_eval754\\results_20261006\\v4_48\\final_test\\predictions_with_provenance.json",
       "predictions_sha256": "7c7fa6676f6cbc22d71889e013ef7f036b056e1c019a0e585d252331f1567a37",
-      "checkpoint": "/data/codefile/changshaoqing/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38",
+      "checkpoint": "/data/codefile/anonymous/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38",
       "seed": 48
     }
   },

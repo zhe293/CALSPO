@@ -1,5 +1,5 @@
 {
-  "source_checkpoint": "/data/codefile/changshaoqing/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38/actor",
+  "source_checkpoint": "/data/codefile/anonymous/label_sft_v4_304/results/label_sft_v4_s48_gpu2/global_step_38/actor",
   "source_state_file": "model_world_size_1_rank_0.pt",
   "global_step": 38,
   "extraction": "All LoRA A/B tensors extracted on CPU from the complete single-rank FSDP model state",

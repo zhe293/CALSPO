@@ -29,7 +29,7 @@ def args(rewards, single=False):
                 task_ids=['one']*16 if single else ['one']*8+['two']*8,
                 dataset_ids=['data']*16, class_labels=['class']*16)
 
-old=load_function(Path('/data/codefile/changshaoqing/human_behavior_atlas/verl/verl/trainer/ppo/core_algos.py'))
+old=load_function(Path('/data/codefile/anonymous/human_behavior_atlas/verl/verl/trainer/ppo/core_algos.py'))
 new=load_function(ROOT/'patched/core_algos.py')
 sequence=[([0,0,0,1]*2+[0,1,2,3]*2), ([0,1,0,1]*2+[0,0,0,1]*2), ([0]*8+[0,1,2,3]*2)]
 reset(); expected=[old(**args(v))[0].clone() for v in sequence]

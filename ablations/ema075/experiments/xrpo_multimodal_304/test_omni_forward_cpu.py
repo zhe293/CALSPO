@@ -23,8 +23,8 @@ for key,val in dict(depth=1,hidden_size=32,embed_dim=32,intermediate_size=64,num
     setattr(c.vision_config,key,val)
 c._attn_implementation='eager'
 model=Thinker(c).float().eval()
-config=OmegaConf.create(dict(prompt_key='problem',image_key='images',video_key='videos',audio_key='audios',modalities='audio,videos',max_prompt_length=896,filter_overlong_prompts=False,truncation='error',return_multi_modal_inputs=True,format_prompt='/data/codefile/changshaoqing/human_behavior_atlas_xrpo_304/training/rl/format_prompt/default.jinja'))
-ds=RLHFDataset(['/data/datasets/human_behavior_atlas-data/changshaoqing_multimodal_304_v4/train.parquet'],p.tokenizer,config,processor=p)
+config=OmegaConf.create(dict(prompt_key='problem',image_key='images',video_key='videos',audio_key='audios',modalities='audio,videos',max_prompt_length=896,filter_overlong_prompts=False,truncation='error',return_multi_modal_inputs=True,format_prompt='/data/codefile/anonymous/human_behavior_atlas_xrpo_304/training/rl/format_prompt/default.jinja'))
+ds=RLHFDataset(['/data/datasets/human_behavior_atlas-data/anonymous_multimodal_304_v4/train.parquet'],p.tokenizer,config,processor=p)
 for sig in ('text','text_audio','text_video_audio'):
     row=ds[next(i for i,r in enumerate(ds.dataframe) if r['modality_signature']==sig)]
     mask=row['attention_mask'].bool()

@@ -11,7 +11,7 @@ import importlib.util
 from pathlib import Path
 from collections import Counter
 
-repo = Path('/data/codefile/changshaoqing/human_behavior_atlas')
+repo = Path('/data/codefile/anonymous/human_behavior_atlas')
 exp = repo / 'experiments/p40_text_trend'
 sys.path.insert(0, str(repo / 'verl'))
 
@@ -36,7 +36,7 @@ emit('files', {p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in exp.g
 sets = {}
 rows_by_split = {}
 for split in ('train', 'validation'):
-    p = Path('/data/datasets/human_behavior_atlas-data/changshaoqing_text_trend') / (split + '.parquet')
+    p = Path('/data/datasets/human_behavior_atlas-data/anonymous_text_trend') / (split + '.parquet')
     rows = pq.read_table(p).to_pylist()
     rows_by_split[split] = rows
     sets[split] = {str(r['problem']).strip() for r in rows}
@@ -63,7 +63,7 @@ d.audio_key='audios'
 d.format_prompt=Template((exp/'text_prompt.jinja').read_text())
 d.processor=processor
 d.tokenizer=processor.tokenizer
-d.base_dir='/data/datasets/human_behavior_atlas-data/changshaoqing_text_trend'
+d.base_dir='/data/datasets/human_behavior_atlas-data/anonymous_text_trend'
 d.max_prompt_length=512
 d.truncation='error'
 d.return_multi_modal_inputs=False

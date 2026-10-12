@@ -1,0 +1,26 @@
+{
+  "training_row_index": 250,
+  "input": {
+    "problem": "<video>\n<audio>\nI can't do this.\nHow would you describe the emotional state of the speaker in the recording? Choose the most appropriate emotion from: \nanger, \ndisgust, \nfear, \nhappy, \nsurprise, \nneutral, \nsad",
+    "answer": "sad",
+    "dataset": "meld_emotion",
+    "task": "emotion_cls",
+    "class_label": "sadness",
+    "modality_signature": "text_video_audio",
+    "texts": [],
+    "ext_video_feats": [],
+    "ext_audio_feats": [],
+    "images": [],
+    "videos": [
+      "media/ce3a06d51e03cc96b9e7.mp4"
+    ],
+    "audios": [
+      "media/48f76f72d8d0413f87dc.wav"
+    ]
+  },
+  "video_duration": 1.04,
+  "frame_fractions": [
+    0.25,
+    0.65
+  ]
+}

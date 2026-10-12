@@ -17,7 +17,7 @@
 
 ## 数据
 
-数据目录：`/data/datasets/human_behavior_atlas-data/changshaoqing_multimodal_304_v4`。从共享数据集只读抽取，媒体文件保存在个人目录；训练与验证提示词没有重复。v4 保留 v3 的所有 304+64 条样本、标签及媒体，只纠正 80+16 条纯文本抑郁分类题目中错误要求依据录音语气和韵律判断的句子；新题目明确只依据书面转写。
+数据目录：`/data/datasets/human_behavior_atlas-data/anonymous_multimodal_304_v4`。从共享数据集只读抽取，媒体文件保存在个人目录；训练与验证提示词没有重复。v4 保留 v3 的所有 304+64 条样本、标签及媒体，只纠正 80+16 条纯文本抑郁分类题目中错误要求依据录音语气和韵律判断的句子；新题目明确只依据书面转写。
 
 | 任务/模态 | 训练 | 验证 |
 | --- | ---: | ---: |
@@ -33,8 +33,8 @@
 
 ## 代码与备份
 
-- 原服务器仓库：`/data/codefile/changshaoqing/human_behavior_atlas`，未改动。
-- 隔离实验仓库：`/data/codefile/changshaoqing/human_behavior_atlas_xrpo_304`。
+- 原服务器仓库：`/data/codefile/anonymous/human_behavior_atlas`，未改动。
+- 隔离实验仓库：`/data/codefile/anonymous/human_behavior_atlas_xrpo_304`。
 - 本地原始文件备份：本目录 `server_baseline/`；本地改后副本：`patched/`。
 - 共享模型和共享源数据均只读使用。
 - 隔离仓库的 `rl_dataset.py`、`audio_utils.py`、`vision_utils.py`、`hf_rollout.py`、`batch.py` 负责真实媒体输入、生成和准确计长；`ray_trainer.py` 选择优势算法与记录日志；`xrpo_advantage.py` 实现研究中的两个自定义优势模式。
@@ -45,15 +45,15 @@
 
 启动前核查已补强：训练器把 `multi_modal_inputs` 与模态标识送入生成批次，并保留给 actor 计算；HF rollout 为 Qwen 的三轴位置编号追加回答位置；CPU 替身测试确认音频、视频特征确实传到模型的 `generate()` 参数。实际采样器验证了 38 个训练批次和 8 个验证批次，全部行恰好出现一次，每批只有一种模态。等待程序启动时锁定关键代码和数据文件的 SHA256，真正启动前再次比较，文件变化则停止提交。
 
-新输出目录：`/data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924`。
+新输出目录：`/data/codefile/anonymous/xrpo_multimodal_304_results_20260924`。
 
 服务器上查看等待或运行状态：
 
 ```bash
-cat /data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924/watcher_status.json
-tail -f /data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924/watcher.log
-tail -f /data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924/launcher_original_harpo.log
-tail -f /data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924/launcher_xrpo_23.log
+cat /data/codefile/anonymous/xrpo_multimodal_304_results_20260924/watcher_status.json
+tail -f /data/codefile/anonymous/xrpo_multimodal_304_results_20260924/watcher.log
+tail -f /data/codefile/anonymous/xrpo_multimodal_304_results_20260924/launcher_original_harpo.log
+tail -f /data/codefile/anonymous/xrpo_multimodal_304_results_20260924/launcher_xrpo_23.log
 ```
 
 实际训练开始后，各运行目录有 `training.log`、`steps.jsonl`、`resource_usage.csv`、`resource_usage.summary.json`、最终验证结果和 `status.json`。若任何前置条件或训练失败，等待程序会写 `failed`，不会擅自重跑。

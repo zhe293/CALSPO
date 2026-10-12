@@ -9,15 +9,15 @@ import time
 from pathlib import Path
 
 
-REPO = Path("/data/codefile/changshaoqing/human_behavior_atlas_xrpo_304")
+REPO = Path("/data/codefile/anonymous/human_behavior_atlas_xrpo_304")
 EXPERIMENT = REPO / "experiments/xrpo_multimodal_304"
-DATASET = Path("/data/datasets/human_behavior_atlas-data/changshaoqing_multimodal_304_v4")
-OUTPUT = Path("/data/codefile/changshaoqing/xrpo_multimodal_304_results_20260924")
+DATASET = Path("/data/datasets/human_behavior_atlas-data/anonymous_multimodal_304_v4")
+OUTPUT = Path("/data/codefile/anonymous/xrpo_multimodal_304_results_20260924")
 MODEL = Path("/share/155/pretrained/Qwen2.5-Omni-3B")
 REWARD_MODEL = Path("/share/155/pretrained/mashang/SAGEPO/reward_models/all-MiniLM-L6-v2")
 OLD_JOBS = (
-    Path("/data/codefile/changshaoqing/harpo_p40_runs/harpo_b_gpu2_repeat_20260924/harpo_reward_b"),
-    Path("/data/codefile/changshaoqing/harpo_p40_runs/grpo_b_gpu0_20260924/grpo_reward_b"),
+    Path("/data/codefile/anonymous/harpo_p40_runs/harpo_b_gpu2_repeat_20260924/harpo_reward_b"),
+    Path("/data/codefile/anonymous/harpo_p40_runs/grpo_b_gpu0_20260924/grpo_reward_b"),
 )
 TARGETS = (("original_harpo", 0), ("xrpo_23", 2))
 PINNED_FILES = (

@@ -5,7 +5,7 @@ import subprocess
 import sys
 import tempfile
 
-with tempfile.TemporaryDirectory(prefix='suite_guard_',dir='/data/codefile/changshaoqing/harpo_p40_runs') as tmp:
+with tempfile.TemporaryDirectory(prefix='suite_guard_',dir='/data/codefile/anonymous/harpo_p40_runs') as tmp:
     root=Path(tmp)
     first=root/'grpo_reward_a'
     first.mkdir()

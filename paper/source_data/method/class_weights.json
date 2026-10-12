@@ -1,0 +1,26 @@
+{
+  "counts": {
+    "depression_cls/depression": 17,
+    "depression_cls/no depression": 63,
+    "emotion_cls/disgust": 27,
+    "emotion_cls/fear": 26,
+    "emotion_cls/anger": 19,
+    "emotion_cls/surprise": 32,
+    "emotion_cls/happy": 32,
+    "emotion_cls/neutral": 64,
+    "emotion_cls/sad": 24
+  },
+  "weights": {
+    "depression_cls/depression": 1.6088119021899892,
+    "depression_cls/no depression": 0.8357174232185745,
+    "emotion_cls/disgust": 1.1091436836784279,
+    "emotion_cls/fear": 1.13027212853606,
+    "emotion_cls/anger": 1.3221870278997543,
+    "emotion_cls/surprise": 1.0188135286661473,
+    "emotion_cls/happy": 1.0188135286661473,
+    "emotion_cls/neutral": 0.7204099548844277,
+    "emotion_cls/sad": 1.1764245300588652
+  },
+  "calculation": "sqrt(N_task/(K_task*n_class)), normalized by frequency-weighted task mean, clipped to [0.5,2].",
+  "source": "code/run/run_seed48_gpu2.py:98-103; label_supervision.py:supervised_backward"
+}

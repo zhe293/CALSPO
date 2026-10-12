@@ -21,7 +21,7 @@ def main():
     args = parser.parse_args()
     root = args.output_root.resolve(strict=True)
     baseline = args.baseline_dir.resolve(strict=True)
-    owned_prefix = '/data/codefile/changshaoqing/harpo_p40_runs/'
+    owned_prefix = '/data/codefile/anonymous/harpo_p40_runs/'
     if not str(root).startswith(owned_prefix) or not str(baseline).startswith(owned_prefix):
         raise ValueError('Output and baseline must be in the personal run directory')
     if root.stat().st_uid != os.getuid():

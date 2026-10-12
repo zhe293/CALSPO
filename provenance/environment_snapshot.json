@@ -1,7 +1,7 @@
 {
   "snapshot_date": "2026-10-07T18:34:57.317804+08:00",
   "python": "3.10.21 | packaged by conda-forge | (main, Aug 21 2026, 22:42:31) [GCC 14.4.0]",
-  "environment": "changshaoqing_harpo_p40",
+  "environment": "anonymous_harpo_p40",
   "packages": {
     "torch": "2.5.1+cu118",
     "transformers": "4.52.2",

@@ -25,7 +25,7 @@ from text_dataset import TextTrendDataset
 logging.disable(logging.WARNING)
 transformers.utils.logging.set_verbosity_error()
 MODEL='/share/155/pretrained/Qwen2.5-Omni-3B'
-DATA='/data/datasets/human_behavior_atlas-data/changshaoqing_text_trend'
+DATA='/data/datasets/human_behavior_atlas-data/anonymous_text_trend'
 
 class Preflight(unittest.TestCase):
     @classmethod

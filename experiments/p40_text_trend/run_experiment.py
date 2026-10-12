@@ -153,7 +153,7 @@ def main() -> None:
             "MKL_NUM_THREADS": "1",
             "NUMEXPR_NUM_THREADS": "1",
             "RAY_ADDRESS": "local",
-            "RAY_TMPDIR": "/tmp/changshaoqing",
+            "RAY_TMPDIR": "/tmp/anonymous",
             "TOKENIZERS_PARALLELISM": "false",
             "HF_HUB_OFFLINE": "1",
             "TRANSFORMERS_OFFLINE": "1",
