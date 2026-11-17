@@ -11,3 +11,7 @@ models/all-MiniLM-L6-v2/
 *.log
 
 !models/EquiAffect-3B/adapter_model.safetensors
+
+/datasets/
+/experiment_data/
+/paper/

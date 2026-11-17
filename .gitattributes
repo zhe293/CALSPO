@@ -1,11 +1,8 @@
 models/EquiAffect-3B/adapter_model.safetensors filter=lfs diff=lfs merge=lfs -text
 models/EquiAffect-3B/adapter_config.json -text
-paper/results/**/*.json -text
 scripts/setup_verl.sh text eol=lf
 ablations/ema075/scripts/setup_verl.sh text eol=lf
 ablations/ema095/scripts/setup_verl.sh text eol=lf
-datasets/asset_manifest.json text eol=lf
-datasets/media_mapping.json text eol=lf
 # Preserve archived implementation bytes for snapshot SHA-256 on every platform.
 verl/** -text
 experiments/** -text

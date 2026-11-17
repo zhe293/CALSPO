@@ -1,9 +1,0 @@
-﻿Subset,Model,Metric,Value,Denominator,Numerator
-text_audio,HARPO,accuracy,27.184466019417474,103,28
-text_video_audio,HARPO,accuracy,69.56521739130434,184,128
-text_audio,CALSPO,accuracy,31.06796116504854,103,32
-text_video_audio,CALSPO,accuracy,77.71739130434783,184,143
-text_audio,HARPO,invalid_rate,22.330097087378643,103,23
-text_video_audio,HARPO,invalid_rate,1.6304347826086956,184,3
-text_audio,CALSPO,invalid_rate,30.097087378640776,103,31
-text_video_audio,CALSPO,invalid_rate,0.5434782608695652,184,1

@@ -13,7 +13,7 @@ EquiAffect-3B 是以 **CALSPO（Class-Aware Supervised Policy Optimization）** 
 
 原检查点单独导出的适配器只包含音频与视觉模块，漏掉语言解码层。本次从同一检查点的完整模型状态重新提取888个LoRA张量，覆盖444个目标模块；原导出的384个张量与重新提取后的对应张量逐字节一致。所有张量均为有限float32值。原始训练状态未修改。
 
-克隆私有仓库后执行 `git lfs pull` 获取实际权重文件；GitHub网页中的LFS指针不是权重本体。
+克隆仓库后执行 `git lfs pull` 获取实际权重文件；GitHub网页中的LFS指针不是权重本体。
 
 ## 加载
 
@@ -39,8 +39,4 @@ model.eval()
 
 参考原实验环境：Transformers 4.52.2、PEFT 0.15.2、PyTorch 2.5.1。多模态输入处理及提示模板见 `evaluation/` 与 `training/`。以上加载片段根据训练时使用的模型类和标准 PEFT 接口整理，本次归档未重新执行 GPU 加载或推理。
 
-## 已报告表现与范围
-
-在当前328题评估集上，整体正确率65.55%，情绪 Macro-F1 62.91%；非中性误判为中性的比例19.51%。中性召回率100%同时对应46.07%的精确率，不能据此认为中性识别无偏。上述指标对应现有逐题预测记录，评估集来源与选择记录见 `datasets/provenance/eval328/`；抑郁分类结果不代表临床诊断能力。
-
-权重文件下载后可运行 `python scripts/verify_equiaffect.py` 检查。使用与分享需遵守基座 Qwen Research License 和数据来源许可；当前仓库为私有科研归档。
+权重文件下载后可运行 `python scripts/verify_equiaffect.py` 检查。使用与分享需遵守基座 Qwen Research License。
